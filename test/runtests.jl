@@ -1,11 +1,5 @@
-using MyExample
-using Test
 
-@testset "MyExample.jl" begin
-    # Write your own tests here.
-    #2x+3y
-    @test my_f(2,1) == 7
-    @test my_f(2,3) == 13
-    @test my_f(1,3) == 11
 
-end
+
+using SafeTestsets
+@safetestset "Benchmark Tests" begin include("my_f_tests.jl") end
